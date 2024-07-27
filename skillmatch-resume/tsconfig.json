@@ -28,6 +28,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".contentlayer/generated"
-  ],
+, "contentlayer.config.ts"  ],
   "exclude": ["node_modules"]
 }
