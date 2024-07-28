@@ -26,7 +26,7 @@ const About: NextPage = () => {
     },
     {
       name: "Nayan Mapara",
-      description: "Description about Author Nayan",
+      description: "Transforming ideas into reality with a creative edge and a relentless pursuit of perfection. To know more about me, visit my LinkedIn profile: https://www.linkedin.com/in/nayanmapara/",
     },
   ];
 
