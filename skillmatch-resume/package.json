@@ -10,7 +10,7 @@
   },
   "engine-strict": true,
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
