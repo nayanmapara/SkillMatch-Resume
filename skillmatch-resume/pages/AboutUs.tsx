@@ -21,7 +21,8 @@ const About: NextPage = () => {
     },
     {
       name: "Niharika Pathuri",
-      description: "Description about Author Niharika",
+      description:
+        "I am a passionate fourth-year Software Engineering student with a keen interest in software engineering, AI, and machine learning. Dedicated to mastering cutting-edge technologies, I aim to drive innovation and solve real-world challenges. I am eager to apply my skills in developing impactful solutions that positively affect people’s lives. Currently, I am exploring opportunities to gain hands-on experience and contribute meaningfully to the field. You can find me on LinkedIn: https://www.linkedin.com/in/niharika-pathuri/",
     },
     {
       name: "Nayan Mapara",
