@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Box, Button, FormControl, FormLabel, Input, Textarea, Alert, AlertIcon } from '@chakra-ui/react';
 import * as pdfjsLib from 'pdfjs-dist';
+import pdfTextExtract from 'pdf-text-extract';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 
@@ -27,25 +28,39 @@ const UploadPage = () => {
     }
   };
 
+  // const extractTextFromPDF = async (file: File): Promise<string> => {
+  //   try {
+  //     const arrayBuffer = await file.arrayBuffer();
+  //     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+  //     let text = '';
+
+  //     for (let i = 0; i < pdf.numPages; i++) {
+  //       const page = await pdf.getPage(i + 1);
+  //       const content = await page.getTextContent();
+  //       const pageText = content.items.map((item: any) => item.str).join(' ');
+  //       text += pageText + '\n';
+  //     }
+
+  //     return text;
+  //   } catch (error) {
+  //     setError('Error extracting text from PDF.');
+  //     return '';
+  //   }
+  // };
+
+
   const extractTextFromPDF = async (file: File): Promise<string> => {
     try {
       const arrayBuffer = await file.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-      let text = '';
-
-      for (let i = 0; i < pdf.numPages; i++) {
-        const page = await pdf.getPage(i + 1);
-        const content = await page.getTextContent();
-        const pageText = content.items.map((item: any) => item.str).join(' ');
-        text += pageText + '\n';
-      }
-
+      const text = await pdfTextExtract(arrayBuffer);
       return text;
     } catch (error) {
       setError('Error extracting text from PDF.');
       return '';
     }
   };
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
