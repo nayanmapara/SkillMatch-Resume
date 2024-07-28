@@ -18,6 +18,7 @@ const siteConfig = {
       { href: "/", label: "Home" },
       { href: "/#features", id: "features", label: "Features" },
       { href: "/AboutUs", label: "About Us" },
+      { href: "/upload", label: "Submit Resume" },
       
     ],
   },
