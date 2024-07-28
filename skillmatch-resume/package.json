@@ -8,10 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "engine-strict": true,
-  "engines": {
-    "node": "18.x"
-  },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@chakra-ui/skip-nav": "^2.1.0",
@@ -28,7 +24,6 @@
     "framer-motion": "^10.18.0",
     "next-seo": "^6.5.0",
     "pdf-lib": "^1.17.1",
-    "pdf-text-extract": "^1.5.0",
     "pdfjs-dist": "^4.5.136",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
