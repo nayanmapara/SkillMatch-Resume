@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import {
   Box,
   BoxProps,
@@ -44,18 +43,22 @@ export const Header = (props: HeaderProps) => {
     >
       <Container maxW="container.2xl" px="8" py="4">
         <Flex width="full" align="center" justify="space-between">
-          <Logo
+          <Box
+            fontWeight="bold"
+            fontSize="lg"
+            cursor="pointer"
             onClick={(e) => {
               if (window.location.pathname === '/') {
                 e.preventDefault()
-
                 window.scrollTo({
                   top: 0,
                   behavior: 'smooth',
                 })
               }
             }}
-          />
+          >
+            Skill Match Resume
+          </Box>
           <Navigation />
         </Flex>
       </Container>

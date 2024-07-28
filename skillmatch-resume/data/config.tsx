@@ -15,27 +15,10 @@ const siteConfig = {
   privacyUrl: '#',
   header: {
     links: [
-      {
-        id: 'features',
-        label: 'Features',
-      },
-      {
-        id: 'pricing',
-        label: 'Pricing',
-      },
-      {
-        id: 'faq',
-        label: 'FAQ',
-      },
-      {
-        label: 'Login',
-        href: '/login',
-      },
-      {
-        label: 'Sign Up',
-        href: '/signup',
-        variant: 'primary',
-      },
+      { href: "/", label: "Home" },
+      { href: "/#features", id: "features", label: "Features" },
+      { href: "/AboutUs", label: "About Us" },
+      
     ],
   },
   footer: {

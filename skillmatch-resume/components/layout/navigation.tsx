@@ -1,18 +1,12 @@
 import * as React from "react";
-import { HStack } from "@chakra-ui/react";
-
+import { HStack, Button } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-
 import siteConfig from "data/config";
-
 import { NavLink } from "components/nav-link";
-
 import { useScrollSpy } from "hooks/use-scrollspy";
-
 import { MobileNavButton } from "components/mobile-nav";
 import { MobileNavContent } from "components/mobile-nav";
 import { useDisclosure, useUpdateEffect } from "@chakra-ui/react";
-
 import ThemeToggle from "./theme-toggle";
 
 const Navigation: React.FC = () => {
@@ -55,6 +49,16 @@ const Navigation: React.FC = () => {
       })}
 
       <ThemeToggle />
+
+      <Button
+        as="a"
+        href="/signup"
+        colorScheme="primary"
+        size="lg"
+        display={["none", null, "inline-flex"]}
+      >
+        Sign Up
+      </Button>
 
       <MobileNavButton
         ref={mobileNavBtnRef}

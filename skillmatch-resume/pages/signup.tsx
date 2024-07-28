@@ -23,7 +23,7 @@ const providers = {
   },
 }
 
-const Login: NextPage = () => {
+const Signup: NextPage = () => {
   return (
     <Section height="100vh" innerWidth="container.xl">
       <BackgroundGradient
@@ -73,7 +73,7 @@ const Login: NextPage = () => {
             <Box width="container.sm" pt="8" px="8">
               <Auth
                 view="signup"
-                title={siteConfig.signup.title}
+                title="Join the AI Resume Optimization Revolution"
                 providers={providers}
                 loginLink={<Link href="/login">Log in</Link>}
               >
@@ -96,7 +96,7 @@ const Login: NextPage = () => {
   )
 }
 
-export default Login
+export default Signup
 
 export const getStaticProps = () => {
   return {
