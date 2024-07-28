@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engine-strict": true,
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@chakra-ui/skip-nav": "^2.1.0",
