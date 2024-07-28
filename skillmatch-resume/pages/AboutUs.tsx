@@ -7,29 +7,26 @@ import {
   Heading,
   Text,
   VStack,
-  Avatar,
+  Flex,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { SEO } from "components/seo/seo";
-
 
 const About: NextPage = () => {
   const authors = [
     {
       name: "Ryan Farekh",
-      description: "Description about Author 1.",
-      avatar: "/static/images/avatar1.jpg",
+      description:
+        "Hello! I'm Ryan Farekh, a computer engineering student at McMaster University with a passion for AI, machine learning, and robotics. I enjoy solving complex problems and developing innovative solutions. I am fascinated by the practical applications of AI, from creating intelligent systems to designing autonomous robots. My goal is to enhance processes and user experiences through smart, efficient technologies. I have expertise in Python, C, C++, Assembly, Java, JavaScript, and Verilog. I work with TensorFlow, PyTorch, Node.js, React.js, Arduino, and LTSpice, bringing projects from concept to reality. Please visit my personal website to learn more: ryanfarekh.com. Thanks for visiting!"
     },
-    
     {
       name: "Niharika Pathuri",
       description: "Description about Author Niharika",
-      avatar: "/static/images/avatar3.jpg",
     },
     {
-        name: "Nayan Mapara",
-        description: "Description about Author Nayan",
-        avatar: "/static/images/avatar3.jpg",
-      },
+      name: "Nayan Mapara",
+      description: "Description about Author Nayan",
+    },
   ];
 
   return (
@@ -52,17 +49,23 @@ const About: NextPage = () => {
 const AuthorCard: React.FC<{
   name: string;
   description: string;
-  avatar: string;
-}> = ({ name, description, avatar }) => {
+}> = ({ name, description }) => {
+  const bg = useColorModeValue("gray.100", "gray.700");
+
   return (
-    <VStack spacing="4" alignItems="flex-start">
-      <Avatar src={avatar} size="xl" />
-      <Box>
-        <Heading as="h3" size="md">
-          {name}
-        </Heading>
-        <Text>{description}</Text>
-      </Box>
+    <VStack
+      spacing="4"
+      alignItems="flex-start"
+      w="full"
+      p="5"
+      borderRadius="md"
+      bg={bg}
+      boxShadow="md"
+    >
+      <Heading as="h3" size="md">
+        {name}
+      </Heading>
+      <Text>{description}</Text>
     </VStack>
   );
 };
