@@ -50,8 +50,8 @@ const UploadPage = () => {
     if (resumeText && jobDescription) {
       try {
         // Use the backend endpoint
-        // http://127.0.0.1:5000/submit_resume
-        const response = await fetch('https://skill-match-backend.vercel.app/submit_resume', {
+        // https://skill-match-backend.vercel.app/submit_resume
+        const response = await fetch('http://127.0.0.1:5000/submit_resume', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
